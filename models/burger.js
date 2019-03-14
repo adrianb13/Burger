@@ -9,7 +9,7 @@ var burger = {
     insertOne: function(colVal, cb) {
         orm.insertOne("burgers", "burger_name", colVal, function(res) {
             console.log(res);
-            cb(res);
+            cb;
         });
     },
     updateOne: function(colId, cb) {

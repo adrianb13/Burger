@@ -20,9 +20,8 @@ $(function() {
         event.preventDefault();
 
         var newBurger = {
-            burger_name: $("#burger [name=burger_name]").val().trim()
+            burger_name: $("#burger").val().trim()
         }
-        console.log(newBurger.name);
 
         $.ajax("/api/burgers", {
             type: "POST",
