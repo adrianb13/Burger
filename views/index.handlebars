@@ -1,8 +1,8 @@
 <h1>Eat Da Burger!</h1>
 
-<h2>Eat Me!!!!</h2>
+<h2><span>Eat Me!!!!</span></h2>
 
-<ul>
+<ul class="container">
     {{#each burgers}}
         {{#unless this.devoured}}
 
@@ -15,9 +15,10 @@
     {{/each}}
 </ul>
 
-<h2>Devoured! That Was Good!</h2>
+<h2><span>Devoured! That Was Good!</span></h2>
 
-<ul>
+<ul class="container">
+    <p class="eaten">In Your Belly</p>
     {{#each burgers}}
         {{#if devoured}}
             <li>
@@ -27,12 +28,12 @@
     {{/each}}
 </ul>
 
-<h2>Add A Burger</h2>
+<h2><span>Add A Burger!</span></h2>
 <form class="addBurger">
     <div>
         <label for="burger">Burger Name:</label>
         <input type="text" id="burger" name="burger_name">
     </div>
-
+    <br>
     <button type="submit">Add Burger</button>
 </form>
