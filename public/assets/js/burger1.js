@@ -26,9 +26,11 @@ $(function() {
 
         $.post("/api/burgers", newBurger, function (data){
             console.log(data);
-        }).then(function(){
+        }).done(function(data){
             console.log("Done! New Burger Added!");
+            res.render("/", data);
             location.reload();
+
             
         })
     })
