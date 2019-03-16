@@ -8,7 +8,7 @@ var app = express();
     app.use(express.json());
 
     app.use(express.static("./public"));
-    app.use(express.static("./public/assets/js"))
+    app.use(express.static("./public/assets/js"));
 
 var exphbs = require("express-handlebars");
 
