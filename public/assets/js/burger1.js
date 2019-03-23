@@ -28,8 +28,7 @@ $(function() {
             console.log(data);
         }).done(function(data){
             console.log("Done! New Burger Added!");
-            res.render("/", data);
-            location.reload();
+            res.redirect("/");
 
             
         })
