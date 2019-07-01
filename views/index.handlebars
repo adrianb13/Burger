@@ -8,7 +8,7 @@
 
             <li>{{this.burger_name}}
             	<button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
-                    {{#if this.devoured}}DEVOUR IT!{{else}}DEVOURED{{/if}}
+                    {{#if this.devoured}}DEVOURED{{else}}DEVOUR IT{{/if}}
             	</button>
             </li>
         {{/unless}}
@@ -21,8 +21,10 @@
     <p class="eaten">In Your Belly</p>
     {{#each burgers}}
         {{#if devoured}}
-            <li>
-                {{this.burger_name}}
+            <li>{{this.burger_name}}
+            	<button class="order-devoured" data-id="{{id}}" data-devoured="{{false}}">
+                    {{#if this.devoured}}ORDER AGAIN{{else}}DEVOURED{{/if}}
+            	</button>
             </li>
         {{/if}}
     {{/each}}

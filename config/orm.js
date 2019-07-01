@@ -25,6 +25,14 @@ var orm = {
             if (err) {throw err};
             cb(result);
         });
+    },
+
+    order: function(table, column_name, colId, cb) {
+        var queryString = "UPDATE ?? SET ?? = false WHERE id = ?";
+        connection.query(queryString, [table, column_name, colId], function(err, result) {
+            if (err) {throw err};
+            cb(result);
+        });
     }
 };
 

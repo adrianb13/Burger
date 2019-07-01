@@ -43,10 +43,15 @@ li {
         width:400px;
         border: 2px solid black;
         margin: 0px auto 0px auto;
+        padding-bottom: 5px;
         text-align: left;
         background-color: lightgrey;
     }
     .change-devoured {
+        float: right;
+        margin-right: 30px;
+    }
+    .order-devoured {
         float: right;
         margin-right: 30px;
     }

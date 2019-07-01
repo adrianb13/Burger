@@ -33,5 +33,23 @@ $(function() {
             
         })
     })
+
+    $(".order-devoured").on("click", function(event) {
+        var id = $(this).data("id");
+        var devoured = $(this).data("devoured");
+
+        var newDevoured = {
+            devoured: false
+        };
+        console.log(newDevoured)
+
+        $.ajax("/api/burgers/order/"+id, {
+            type: "PUT",
+            data: newDevoured
+        }).then(function() {
+            console.log("Ordered:", devoured);
+            location.reload();
+        })
+    })
 })
 

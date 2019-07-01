@@ -28,4 +28,13 @@ router.put("/api/burgers/:id", function(req, res) {
     });
 });
 
+router.put("/api/burgers/order/:id", function(req, res) {
+    burger.order(req.params.id, function(result) {
+        if (result.changedRows === 0) {
+            return res.status(404).end();
+        }
+        res.status(200).end();
+    });
+});
+
 module.exports = router

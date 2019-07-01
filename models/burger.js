@@ -16,6 +16,11 @@ var burger = {
         orm.updateOne("burgers", "devoured", colId, function(res) {
             cb(res);
         });
+    },
+    order: function(colId, cb) {
+        orm.order("burgers", "devoured", colId, function(res) {
+            cb(res);
+        });
     }
 };
 
